@@ -222,7 +222,7 @@ int heap:: search(int num)
   {
     if(num==arr[i])
     {
-      return i;
+      return i+1;
     }
   }
   return 0;
