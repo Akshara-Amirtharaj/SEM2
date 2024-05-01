@@ -137,39 +137,12 @@ void heap:: heapifyup()
           arr[parent]=temp;
       
         }
-        i--;
+        i=parent;
       
         
      } 
   }
-//method to heapify while deleting
-/*void heap::heapifydown() {
-    int i = 0; 
-    while (true) {
-        int left = 2 * i + 1; 
-        int right = 2 * i + 2; 
-        int largest = i;
 
-        if (left <= cur && arr[left] > arr[largest]) {
-            largest = left;
-        }
-
-      
-        if (right <= cur && arr[right] > arr[largest]) {
-            largest = right;
-        }
-
-        
-        if (largest != i) {
-            int temp = arr[i];
-            arr[i] = arr[largest];
-            arr[largest] = temp;
-            i = largest; 
-        } else {
-            break;
-        }
-    }
-}*/
 //method to display
 void heap::display()
 {
