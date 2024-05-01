@@ -126,18 +126,33 @@ int heap:: insert(int num)
 //method to heapify while inserting
 void heap:: heapifyup()
   {
-     int i=cur;     
-     while(i>0)
-     {
-        int child=(i-1)/2;
-        if(arr[i]>arr[child])
-        {
-          int temp=arr[i];
-          arr[i]=arr[child];
-          arr[child]=temp;
-      
+    {
+    int i = 0; 
+    while (true) {
+        int left = 2 * i + 1; 
+        int right = 2 * i + 2; 
+        int largest = i;
+
+        if (left <= cur && arr[left] > arr[largest]) {
+            largest = left;
         }
-        i--;
+
+      
+        if (right <= cur && arr[right] > arr[largest]) {
+            largest = right;
+        }
+
+        
+        if (largest != i) {
+            int temp = arr[i];
+            arr[i] = arr[largest];
+            arr[largest] = temp;
+            i = largest; 
+        } else {
+            break;
+        }
+    }
+}
       
         
      } 
