@@ -129,15 +129,15 @@ void heap:: heapifyup()
      int i=cur;     
      while(i>0)
      {
-        int parent=(i-1)/2;
-        if(arr[i]>arr[parent])
+        int child=(i-1)/2;
+        if(arr[i]>arr[child])
         {
           int temp=arr[i];
-          arr[i]=arr[parent];
-          arr[parent]=temp;
+          arr[i]=arr[child];
+          arr[child]=temp;
       
         }
-        i=parent;
+        i--;
       
         
      } 
